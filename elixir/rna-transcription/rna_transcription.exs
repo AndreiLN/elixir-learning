@@ -7,8 +7,8 @@ defmodule RNATranscription do
   iex> RNATranscription.to_rna('ACTG')
   'UGAC'
   """
+  @translate_table %{'G' => 'C', 'C' => 'G', 'T' => 'A', 'A' => 'U'}
   @spec to_rna([char]) :: [char]
-  def to_rna(dna) do
-
-  end
+  def to_rna([]) ,do: ''
+  def to_rna([h|t]) ,do: Map.get(@translate_table,[h]) ++ to_rna(t)
 end
