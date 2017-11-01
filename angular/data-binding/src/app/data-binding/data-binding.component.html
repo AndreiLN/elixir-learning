@@ -14,7 +14,7 @@
     <img bind-src="urlImagem"/>
   </article-->
   
-  <article>
+  <!--article>
     <h3>Class and Style Binding</h3>
     <div>Selecione uma classe:
         <select #classe (change)="0">
@@ -42,6 +42,31 @@
           Este texto só aparece em caso de erro
         </div>
         
+    </div>
+  </article-->
+  
+  <!--article>
+    <h3>Event Binding</h3>
+    <div>
+        <button (click)="botaoClicado()" class="btn btn-primary">Me Clique!</button>
+        <input type="text" (keyup)="onKeyUp(campoInput.value)" (keyup.enter)="salvarValor(campoInput.value)" 
+        class="form-control" #campoInput/>
+        <p>Valor Atual: {{ valorAtual }}</p>
+        <p>Valor Salvo: {{ valorSalvo }}</p>
+        <br/>
+        <span (mouseover)="ouMouseOverOut()"
+              (mouseout)="ouMouseOverOut()"
+              [class.highlight]="isMouseOver == true">Passe o mouse sobre este item!</span>
+    </div>
+  </article-->
+  
+  <!--app-meu-form></app-meu-form-->
+</section>
+<section>
+  <article>
+    <h3>Input/Output properties</h3>
+    <div>
+      <app-curso [nome]="nomeCurso"></app-curso>
     </div>
   </article>
 </section>
