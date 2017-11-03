@@ -61,12 +61,15 @@
   </article-->
   
   <!--app-meu-form></app-meu-form-->
+  
 </section>
 <section>
   <article>
     <h3>Input/Output properties</h3>
     <div>
       <app-curso [nome]="nomeCurso"></app-curso>
+      <contator [valor]="valorInicial"
+      (mudouValor)="onMudouValor($event)"></contator>
     </div>
   </article>
 </section>
