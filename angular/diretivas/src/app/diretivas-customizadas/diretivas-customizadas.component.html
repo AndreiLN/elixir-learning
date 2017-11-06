@@ -1,0 +1,18 @@
+<!--p fundoAmarelo>
+  Texto com fundo amarelo
+</p>
+<button class="button" fundoAmarelo highlightMouse>Botão com fundo highlight</button>
+
+<br/>
+<p [highlight]="'red'" [defaultColor]="'gray'">Texto com highlight com cores customizadas</p-->
+
+
+<button (click)="onMostrarCursos()">Mostar ou esconder cursos</button>
+<h5>Hidden como alternativa</h5>
+<div [hidden]="!mostrarCursos">
+    Lista de Cursos:
+</div>
+<div [hidden]="mostrarCursos">
+    Não existem cursos para serem listados
+</div>
+

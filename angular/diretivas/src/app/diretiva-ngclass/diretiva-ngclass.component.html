@@ -1,14 +1,19 @@
 <span class="icon is-large">
-  <i class="fa fa-3x" style="color:orange;"
+  <i class="fa fa-3x"
   (click)="meuFavorito=!meuFavorito"
   [class.fa-star]="meuFavorito"
-  [class.fa-star-o]="!meuFavorito"></i>
+  [class.fa-star-o]="!meuFavorito"
+  [style.color]="meuFavorito ? 'orange' : 'gray'"></i>
 </span>
 <span class="icon is-large">
-  <i class="fa fa-3x" style="color:#118fe4;"
+  <i class="fa fa-3x"
   (click)="meuFavorito=!meuFavorito"
   [ngClass]="{
       'fa-thumbs-up': meuFavorito,
       'fa-thumbs-down': !meuFavorito
-  }"></i>
+  }"
+  [ngStyle]="{
+      'color': meuFavorito ? 'green' : 'red'
+  }"
+  ></i>
 </span>
