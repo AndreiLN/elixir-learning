@@ -1,0 +1,19 @@
+<h6 class="has-text-centered title">Diretiva *ngFor</h6>
+<div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+        <table class="table is-narrow is-clearfix is-marginless is-fullwidth">
+            <thead>
+                <tr>
+                    <th width="20%">Código</th>
+                    <th width="80%">Tecnologia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tecnologia of tecnologias, let i = index" [class.is-selected]="tecnologia=='Angular 2'">
+                    <td width="20%" class="has-text-left">{{ i + 1 }}</td>
+                    <td width="80%" class="has-text-left">{{ tecnologia }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

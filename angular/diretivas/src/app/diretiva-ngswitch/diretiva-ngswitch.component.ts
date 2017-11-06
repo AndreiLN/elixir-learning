@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diretiva-ngswitch.component.css']
 })
 export class DiretivaNgswitchComponent implements OnInit {
-
+  aba = "home";
   constructor() { }
 
   ngOnInit() {
