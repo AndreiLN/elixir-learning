@@ -7,8 +7,8 @@ export class HeaderService {
   
   getMenu(){
     return [
-      {caption: 'Cursos', link: 'cursos'},
-      {caption: 'Login', link: 'login'}
+      {caption: 'Cursos', link: 'cursos', query: {pagina:1}},
+      {caption: 'Login', link: 'login', query: {}}
     ];
   }
 

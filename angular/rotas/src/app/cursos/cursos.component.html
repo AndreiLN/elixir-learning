@@ -1,3 +1,11 @@
-<p>
-  cursos works!
-</p>
+<div class="input-field hoverable">
+  <input #idCurso id="search" (keyup.enter)="detalhesCurso(idCurso.value)" type="search" placeholder="Entre com o id do curso..." style="padding-left:50px;width:100%;box-sizing:border-box;">
+  <label class="label-icon" for="search" style="top:-10px;"><i class="material-icons" style="line-height: inherit;">search</i></label>
+  <i class="material-icons" style="line-height: inherit;">close</i>
+</div>
+<br/>
+<h4 class="header">Lista de cursos:</h4>
+<p>Página: {{ pagina }}</p>
+<div class="collection">
+  <a *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]" class="collection-item" >{{ curso.nome }}</a>
+</div>
