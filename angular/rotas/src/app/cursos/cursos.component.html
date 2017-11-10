@@ -5,7 +5,7 @@
 </div>
 <br/>
 <h4 class="header">Lista de cursos:</h4>
-<p>Página: {{ pagina }}</p>
+<p><b>Página: </b>{{ pagina }}<a (click)="proximaPagina()" style="cursor:pointer;"><i class="material-icons">add</i></a></p>
 <div class="collection">
   <a *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]" class="collection-item" >{{ curso.nome }}</a>
 </div>
