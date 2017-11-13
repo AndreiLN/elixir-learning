@@ -1,0 +1,32 @@
+<div class="card-panel">
+  <h5>Criar/Editar Aluno:</h5>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="id" type="text" class="validate" [value]="aluno?.id" disabled>
+          <label for="id" [class.active]="aluno?.id != undefined" >#</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="nome" type="text" class="validate" [value]="aluno?.nome" #inputNome>
+          <label for="nome" [class.active]="aluno?.nome != undefined">Nome</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" [value]="aluno?.email" #inputEmail>
+          <label for="email" [class.active]="aluno?.email != undefined" >E-mail</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button class="btn waves-effect waves-light" type="button" (click)="salvarAluno(inputNome.value,inputEmail.value);">Salvar
+            <i class="material-icons right">save</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

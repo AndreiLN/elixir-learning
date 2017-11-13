@@ -33,7 +33,7 @@ export class CursosComponent implements OnInit, OnDestroy {
   }
   
   detalhesCurso(id: string){
-    this._router.navigate(["/curso",id]);
+    this._router.navigate(["/cursos",id]);
   }
   
   proximaPagina(){
